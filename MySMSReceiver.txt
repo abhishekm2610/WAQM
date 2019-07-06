@@ -14,7 +14,7 @@ public class MySMSReceiver extends BroadcastReceiver {
         String messageText = getSMSContent(intent);
         Log.e("Message", messageText);
 
-        if(messageText.charAt(0)=='~'){
+        if(messageText.charAt(0)=='&'){
             if(messageText.charAt(1)=='%') {
                 if(messageText.charAt(2)=='&'){
                     String msg = messageText.substring(3);
